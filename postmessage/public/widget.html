@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 10px;
+        }
+        .widget {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chart {
+            width: 100%;
+            height: 200px;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .chart-placeholder {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="widget">
+        <div class="chart">
+            <div class="chart-placeholder">Interactive Chart (Placeholder)</div>
+        </div>
+        <div id="widget-content">Loading analytics data...</div>
+    </div>
+    <script src="widget.js"></script>
+</body>
+</html>

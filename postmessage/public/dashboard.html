@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Secure Banking Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Secure Banking Portal</h1>
+        </div>
+        <div class="content">
+            <div class="dashboard">
+                <h2>Your Dashboard</h2>
+                <div class="account-summary">
+                    <div class="balance-section">
+                        <h3>Balance Summary</h3>
+                        <div class="balance">$12,345.67</div>
+                        <button class="button" id="showDetailsBtn">Show Secret Account Details</button>
+                    </div>
+                    <div class="transactions-section">
+                        <h3>Recent Transactions</h3>
+                        <ul class="transactions">
+                            <li><span class="date">2025-04-15</span> <span class="desc">Grocery Store</span> <span class="amount">-$76.32</span></li>
+                            <li><span class="date">2025-04-13</span> <span class="desc">Salary Deposit</span> <span class="amount">+$2,500.00</span></li>
+                            <li><span class="date">2025-04-10</span> <span class="desc">Electric Bill</span> <span class="amount">-$124.56</span></li>
+                            <li><span class="date">2025-04-08</span> <span class="desc">Online Purchase</span> <span class="amount">-$59.99</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="accountDetails" class="hidden">
+                    <!-- This section will be populated with sensitive account details -->
+                </div>
+                
+                <!-- This iframe loads a third-party widget (analytics in this example) -->
+                <div class="widget-container">
+                    <h3>Analytics Dashboard</h3>
+                    <iframe id="analyticsFrame" src="widget.html" width="100%" height="300"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Secure Banking Portal - For educational purposes only</p>
+        </div>
+    </div>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
