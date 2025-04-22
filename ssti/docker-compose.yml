@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  ssti-vulnerable-app:
+    build: ./vulnerable-app
+    container_name: ssti-vulnerable-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - flag-service
+    networks:
+      - lab-network
+
+  flag-service:
+    build: ./flag-service
+    container_name: flag-service
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    driver: bridge
